@@ -1,13 +1,16 @@
 package com.codeu.alurt;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
+import android.widget.Toast;
+import android.widget.AdapterView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +30,7 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Create some dummy data for the ListView.  Here's a sample weekly forecast
-        String[] data = {
+        final String[] data = {
                 "ASSAULT",
                 "RAPE",
                 "THEFT",
@@ -39,7 +42,7 @@ public class MainActivityFragment extends Fragment {
                 "HEADACHE",
                 "STROKE"
         };
-        List<String> disasterList = new ArrayList<String>(Arrays.asList(data));
+        final List<String> disasterList = new ArrayList<String>(Arrays.asList(data));
 
         // Now that we have some dummy disaster data, create an ArrayAdapter.
         // The ArrayAdapter will take data from a source (like our dummy forecast) and
@@ -54,6 +57,17 @@ public class MainActivityFragment extends Fragment {
         // Get a reference to the ListView, and attach this adapter to it.
         ListView listView = (ListView) rootView.findViewById(R.id.listview_disaster);
         listView.setAdapter(mDisasterAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                String disaster = mDisasterAdapter.getItem(position);
+                Intent intent = new Intent(getActivity(), DetailActivity.class)
+                        .putExtra(Intent.EXTRA_TEXT, disaster);
+                startActivity(intent);
+            }
+        });
+
         return rootView;
     }
 }

@@ -1665,6 +1665,7 @@ containing a value of this type.
         public static final int app_name=0x7f060012;
         public static final int hello_world=0x7f060013;
         public static final int title_activity_detail=0x7f060014;
+        public static final int title_activity_settings=0x7f060015;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f08006b;

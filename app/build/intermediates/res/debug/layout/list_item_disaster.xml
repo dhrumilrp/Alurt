@@ -5,4 +5,4 @@
     android:layout_height="wrap_content"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:gravity="center_vertical"
-    android:id="@+id/list_item_disaster_textview" /><!-- From: file:/Users/Dhrumil/AndroidStudioProjects/Alurt/app/src/main/res/layout/list_item_disaster.xml -->
+    android:id="@+id/list_item_disaster_textview" /><!-- From: file:/Users/vemuri/Desktop/Alurt/app/src/main/res/layout/list_item_disaster.xml -->

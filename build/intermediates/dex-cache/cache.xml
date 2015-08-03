@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/Dhrumil/AndroidStudioProjects/Alurt/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="/Users/Dhrumil/AndroidStudioProjects/Alurt/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-a2441f0f34038e5cc6bd9430826e8c1286a6123d.jar" />
-    </item>
-    <item
-        jar="/Users/Dhrumil/AndroidStudioProjects/Alurt/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="/Users/Dhrumil/AndroidStudioProjects/Alurt/app/build/intermediates/pre-dexed/debug/classes-52f13b6119f5990be709fb46aeb173c5703793ca.jar" />
-    </item>
-    <item
-        jar="/Users/Dhrumil/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jar="/Users/vemuri/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="/Users/Dhrumil/AndroidStudioProjects/Alurt/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-db0030d062ee95635d4a8bdcec378632afd6a136.jar" />
+        <dex dex="/Users/vemuri/Desktop/Alurt/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-b3c2a6bd8d0c6cfa6dcf8c5e4498ce98b55b591c.jar" />
     </item>
     <item
-        jar="/Users/Dhrumil/AndroidStudioProjects/Alurt/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jar="/Users/vemuri/Desktop/Alurt/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/vemuri/Desktop/Alurt/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-209bbdb3126e5579826daed84ae8871c58b78fea.jar" />
+    </item>
+    <item
+        jar="/Users/vemuri/Desktop/Alurt/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="/Users/Dhrumil/AndroidStudioProjects/Alurt/app/build/intermediates/pre-dexed/debug/classes-65f9b2a22b1dc9048f384389e58a62e1381235d8.jar" />
+        <dex dex="/Users/vemuri/Desktop/Alurt/app/build/intermediates/pre-dexed/debug/classes-bd554706fa0ef794bf1d5d7d36fc5839b63ce4f1.jar" />
+    </item>
+    <item
+        jar="/Users/vemuri/Desktop/Alurt/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/vemuri/Desktop/Alurt/app/build/intermediates/pre-dexed/debug/classes-d7493626a1c05595ae5b7ba4831d5d2bafab09d8.jar" />
     </item>
 
 </items>

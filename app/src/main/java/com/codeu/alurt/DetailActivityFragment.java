@@ -144,7 +144,7 @@ public class DetailActivityFragment extends Fragment {
                     .setText(disasterStr +
                             "\n\n\n" + disasterDetails.get(disasterStr)[0] +
                             "\n\n\n" + disasterDetails.get(disasterStr)[countryIndex] +
-                            "\n\n\n" + disasterDetails.get(disasterStr)[countryIndex]);
+                            "\n\n\n" + disasterDetails.get(disasterStr)[countryIndex+1]);
         }
         return rootView;
     }

@@ -1,16 +1,15 @@
 package com.codeu.alurt;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-import android.widget.AdapterView;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -34,12 +33,12 @@ public class MainActivityFragment extends Fragment {
                 "ASSAULT",
                 "RAPE",
                 "THEFT",
-                "FLOOD",
+                "HOUSE DAMAGE",
                 "FIRE",
                 "HEART ATTACK",
-                "FALL",
+                "POISON",
                 "SERIOUS INJURY",
-                "HEADACHE",
+                "SUICIDE",
                 "STROKE"
         };
         final List<String> disasterList = new ArrayList<String>(Arrays.asList(data));

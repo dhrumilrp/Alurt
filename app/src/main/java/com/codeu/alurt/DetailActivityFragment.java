@@ -28,53 +28,93 @@ public class DetailActivityFragment extends Fragment {
         // details for each view, including description and phone number
         final String[] assaultDetails = {
                 "To make a physical attack or to threaten bodily harm",
-                "Call: local police station",
-                "<police station phone number>"
+                "Call: (800) 799-SAFE",
+                "http://www.thehotline.org/",
+                "Call: 0808 2000 247",
+                "http://www.nationaldomesticviolencehelpline.org.uk/",
+                "Call: canada #",
+                "http://endabuseinlanark.ca/"
         };
         final String[] rapeDetails = {
                 "Forcing sexual relations on another individual without consent",
-                "Call: local police station",
-                "<police station phone number>"
+                "Call: (800) 656-HOPE",
+                "https://www.rainn.org/",
+                "Call: UK phone #",
+                "http://rapecrisis.org.uk/",
+                "Call: canada #",
+                "http://www.sexassault.ca/"
         };
         final String[] theftDetails = {
                 "Taking another individual's property without permission",
-                "Call: local police station",
-                "<phone number>"
+                "Call: 330 376-0040",
+                "http://www.crimedoctor.com/home.htm",
+                "Call: UK phone #",
+                "https://www.police.uk/crime-prevention-advice/burglary/",
+                "Call: canada #",
+                "canada website"
         };
-        final String[] floodDetails = {
-                "An overflowing of a large amount of water beyond its normal confines",
-                "Call: electrician, plumber, flood cleanup crew",
-                "<phone number>"
+        final String[] houseDamageDetails = {
+                "Such as floods or other home disasters",
+                "Call: 1-800-427-2200",
+                "https://www.socalgas.com/safety/emergency.shtml",
+                "Call: UK phone #",
+                "UK website",
+                "Call: canada #",
+                "canada website"
         };
         final String[] fireDetails = {
                 "Fire",
-                "Call: local fire department",
-                "<fire dept phone number>"
+                "Call: 1-800-FIRE-LINE",
+                "http://www.nvfc.org/",
+                "Call: 020 8555 1200",
+                "http://www.london-fire.gov.uk/",
+                "Call: canada #",
+                "http://www.firefightingincanada.com/"
         };
         final String[] heartAttackDetails = {
                 "Chest pain, shortness of breath, cold sweat, naseua, lightheadedness",
-                "Call: local police station",
-                "<phone number>"
+                "Call: 1-800-242-8721",
+                "http://www.heart.org",
+                "Call: UK phone #",
+                "https://www.bhf.org.uk/heart-health/how-we-can-help/heart-helpline",
+                "Call: canada #",
+                "http://www.redcross.ca/training-and-certification/first-aid-tips-and-resources-/first-aid-tips/signs---symptoms-of-a-heart-attack"
         };
-        final String[] fallDetails = {
-                "Fall",
-                "Call: local police station",
-                "<phone number>"
+        final String[] poisonDetails = {
+                "Poison",
+                "Call: (800) 222-1222",
+                "http://www.aapcc.org/",
+                "Call: 111",
+                "http://www.npis.org/",
+                "Call: canada #",
+                "http://www.capcc.ca/c"
         };
         final String[] seriousInjuryDetails = {
                 "Strains, sprains, and fractures",
-                "Call: local police station",
-                "<phone number>"
+                "Call: 800.424.2725",
+                "<US website>",
+                "Call: UK phone #",
+                "www.seriousinjuryhelpline.co.uk/",
+                "Call: canada #",
+                "canada website"
         };
-        final String[] headacheDetails = {
-                "Severe migraines",
-                "Call: local police station",
-                "<phone number>"
+        final String[] suicideDetails = {
+                "suicide",
+                "Call: (800) 273-TALK",
+                "http://www.suicidepreventionlifeline.org/getinvolved/locator",
+                "Call: 08457 90 90 90",
+                "http://www.samaritans.org/",
+                "Call: 416-486-2242",
+                "http://www.dcontario.org/"
         };
         final String[] strokeDetails = {
                 "Face drooping, arm weakness, difficulty speaking",
-                "Call: local police station",
-                "<phone number>"
+                "Call: 1-800-STROKES",
+                "http://www.stroke.org/",
+                "UK phone #",
+                "http://www.nhs.uk/conditions/Stroke/Pages/Introduction.aspx",
+                "Call: canada #",
+                "https://www.marchofdimes.ca/EN/programs/src/Pages/src.aspx"
         };
 
         HashMap<String, String[]> disasterDetails = new HashMap<String, String[]>();
@@ -82,13 +122,18 @@ public class DetailActivityFragment extends Fragment {
         disasterDetails.put("ASSAULT", assaultDetails);
         disasterDetails.put("RAPE", rapeDetails);
         disasterDetails.put("THEFT", theftDetails);
-        disasterDetails.put("FLOOD", floodDetails);
+        disasterDetails.put("HOUSE DAMAGE", houseDamageDetails);
         disasterDetails.put("FIRE", fireDetails);
         disasterDetails.put("HEART ATTACK", heartAttackDetails);
-        disasterDetails.put("FALL", fallDetails);
+        disasterDetails.put("POISON", poisonDetails);
         disasterDetails.put("SERIOUS INJURY", seriousInjuryDetails);
-        disasterDetails.put("HEADACHE", headacheDetails);
+        disasterDetails.put("SUICIDE", suicideDetails);
         disasterDetails.put("STROKE", strokeDetails);
+
+        int countryIndex = 1;
+        // if US, countryIndex = 1
+        // if UK, countryIndex = 3
+        // if Canada, countryIndex = 5
 
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
         // The detail Activity called via intent.  Inspect the intent for forecast data.
@@ -98,8 +143,8 @@ public class DetailActivityFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.detail_text))
                     .setText(disasterStr +
                             "\n\n\n" + disasterDetails.get(disasterStr)[0] +
-                            "\n\n\n" + disasterDetails.get(disasterStr)[1] +
-                            "\n\n\n" + disasterDetails.get(disasterStr)[2]);
+                            "\n\n\n" + disasterDetails.get(disasterStr)[countryIndex] +
+                            "\n\n\n" + disasterDetails.get(disasterStr)[countryIndex]);
         }
         return rootView;
     }

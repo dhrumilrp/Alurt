@@ -32,7 +32,7 @@ public class DetailActivityFragment extends Fragment {
                 "http://www.thehotline.org/",
                 "Call: 0808 2000 247",
                 "http://www.nationaldomesticviolencehelpline.org.uk/",
-                "Call: canada #",
+                "Call: Canada #",
                 "http://endabuseinlanark.ca/"
         };
         final String[] rapeDetails = {
@@ -41,7 +41,7 @@ public class DetailActivityFragment extends Fragment {
                 "https://www.rainn.org/",
                 "Call: UK phone #",
                 "http://rapecrisis.org.uk/",
-                "Call: canada #",
+                "Call: Canada #",
                 "http://www.sexassault.ca/"
         };
         final String[] theftDetails = {
@@ -50,7 +50,7 @@ public class DetailActivityFragment extends Fragment {
                 "http://www.crimedoctor.com/home.htm",
                 "Call: UK phone #",
                 "https://www.police.uk/crime-prevention-advice/burglary/",
-                "Call: canada #",
+                "Call: Canada #",
                 "canada website"
         };
         final String[] houseDamageDetails = {
@@ -59,7 +59,7 @@ public class DetailActivityFragment extends Fragment {
                 "https://www.socalgas.com/safety/emergency.shtml",
                 "Call: UK phone #",
                 "UK website",
-                "Call: canada #",
+                "Call: Canada #",
                 "canada website"
         };
         final String[] fireDetails = {
@@ -68,7 +68,7 @@ public class DetailActivityFragment extends Fragment {
                 "http://www.nvfc.org/",
                 "Call: 020 8555 1200",
                 "http://www.london-fire.gov.uk/",
-                "Call: canada #",
+                "Call: Canada #",
                 "http://www.firefightingincanada.com/"
         };
         final String[] heartAttackDetails = {
@@ -77,7 +77,7 @@ public class DetailActivityFragment extends Fragment {
                 "http://www.heart.org",
                 "Call: UK phone #",
                 "https://www.bhf.org.uk/heart-health/how-we-can-help/heart-helpline",
-                "Call: canada #",
+                "Call: Canada #",
                 "http://www.redcross.ca/training-and-certification/first-aid-tips-and-resources-/first-aid-tips/signs---symptoms-of-a-heart-attack"
         };
         final String[] poisonDetails = {
@@ -86,7 +86,7 @@ public class DetailActivityFragment extends Fragment {
                 "http://www.aapcc.org/",
                 "Call: 111",
                 "http://www.npis.org/",
-                "Call: canada #",
+                "Call: Canada #",
                 "http://www.capcc.ca/c"
         };
         final String[] seriousInjuryDetails = {
@@ -95,11 +95,11 @@ public class DetailActivityFragment extends Fragment {
                 "<US website>",
                 "Call: UK phone #",
                 "www.seriousinjuryhelpline.co.uk/",
-                "Call: canada #",
+                "Call: Canada #",
                 "canada website"
         };
         final String[] suicideDetails = {
-                "suicide",
+                "Suicide",
                 "Call: (800) 273-TALK",
                 "http://www.suicidepreventionlifeline.org/getinvolved/locator",
                 "Call: 08457 90 90 90",
@@ -113,7 +113,7 @@ public class DetailActivityFragment extends Fragment {
                 "http://www.stroke.org/",
                 "UK phone #",
                 "http://www.nhs.uk/conditions/Stroke/Pages/Introduction.aspx",
-                "Call: canada #",
+                "Call: Canada #",
                 "https://www.marchofdimes.ca/EN/programs/src/Pages/src.aspx"
         };
 

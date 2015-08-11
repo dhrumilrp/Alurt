@@ -96,7 +96,7 @@ public class DetailActivityFragment extends Fragment {
                 "Call: UK phone #",
                 "www.seriousinjuryhelpline.co.uk/",
                 "Call: Canada #",
-                "canada website"
+                "<Canada website>"
         };
         final String[] suicideDetails = {
                 "Suicide",

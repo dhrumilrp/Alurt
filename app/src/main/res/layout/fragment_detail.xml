@@ -28,13 +28,14 @@
             android:id="@+id/Button"
             android:onClick="panicAlert"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100sp"
             android:background="#ff0000"
             android:text="@string/panic_button"
             android:fontFamily="sans-serif-medium"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:letterSpacing="1.5" />
+            android:letterSpacing="1.5"
+            android:layout_margin="5dip" />
 
     </RelativeLayout>
 

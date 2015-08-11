@@ -15,6 +15,7 @@ import android.widget.TextView;
 public class DetailActivityFragment extends Fragment {
 
     DataStorage data = new DataStorage();
+    SettingsActivity settings = new SettingsActivity();
 
     public DetailActivityFragment() {
     }
@@ -37,9 +38,11 @@ public class DetailActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         int countryIndex = 1;
+        countryIndex = settings.getCountry();
         // if US, countryIndex = 1
         // if UK, countryIndex = 3
         // if Canada, countryIndex = 5
+        System.out.println(countryIndex);
 
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
 
@@ -56,12 +59,4 @@ public class DetailActivityFragment extends Fragment {
         return rootView;
     }
 
-    // code from sunshine to send a text message
-//    private Intent createShareForecastIntent() {
-//        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-//        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-//        shareIntent.setType("text/plain");
-//        shareIntent.putExtra(Intent.EXTRA_TEXT, mForecast + FORECAST_SHARE_HASHTAG);
-//        return shareIntent;
-//    }
 }

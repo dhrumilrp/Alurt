@@ -1,12 +1,17 @@
 package com.codeu.alurt;
 
+import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -16,18 +21,34 @@ import java.util.HashMap;
  */
 public class DetailActivityFragment extends Fragment {
 
-    public DetailActivityFragment() {
-    }
+
+    static String active_disaster;
+
+    public DetailActivityFragment() {}
 
 
-    public static Intent createShareAlertIntent() {
+    public static Intent createShareAlertIntent(Location myLocation) {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
         shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, "Hi this is a test");
+
+        String location_url;
+
+        if(myLocation == null){
+            location_url = "Location NOT FOUND";
+        }
+        else{
+            location_url =
+                    "https://www.google.com/maps/@" + myLocation.getLatitude()
+                            + ","  + myLocation.getLongitude();
+        }
+
+
+        shareIntent.putExtra(Intent.EXTRA_TEXT, active_disaster + " " +
+                location_url);
 
         //sample phone number for testing purposes
-        shareIntent.putExtra("address", "999-999-9999");
+        shareIntent.putExtra("address", "999-999-9999;555-555-5555;333-333-3333");
         return shareIntent;
     }
 
@@ -152,6 +173,7 @@ public class DetailActivityFragment extends Fragment {
         Intent intent = getActivity().getIntent();
         if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
             String disasterStr = intent.getStringExtra(Intent.EXTRA_TEXT);
+            active_disaster = disasterStr;
             ((TextView) rootView.findViewById(R.id.detail_text))
                     .setText(disasterStr +
                             "\n\n\n" + disasterDetails.get(disasterStr)[0] +

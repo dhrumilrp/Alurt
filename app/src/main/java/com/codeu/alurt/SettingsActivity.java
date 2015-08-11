@@ -17,8 +17,6 @@ import android.preference.PreferenceManager;
 public class SettingsActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
 
-    int countryValue = 1; // USA by default
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +24,6 @@ public class SettingsActivity extends PreferenceActivity
         // TODO: Add preferences from XML
         addPreferencesFromResource(R.xml.pref_general);
         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_location_key)));
-        System.out.println("create settings");
     }
 
     /**
@@ -63,24 +60,8 @@ public class SettingsActivity extends PreferenceActivity
             // For other preferences, set the summary to the value's simple string representation.
             preference.setSummary(stringValue);
         }
-        if (stringValue.equals("usa")) {
-            countryValue = 1; // USA
-        }
-        else if (stringValue.equals("uk")) {
-            countryValue = 3; // UK
-        }
-        else if (stringValue.equals("can")) {
-            countryValue = 5; // CANADA
-        }
-        else {
-            countryValue = 0; // should never occur
-        }
-        System.out.println(countryValue);
         return true;
     }
 
-    public int getCountry() {
-        return countryValue;
-    }
 
 }

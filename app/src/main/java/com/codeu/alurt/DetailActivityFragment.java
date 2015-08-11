@@ -130,6 +130,7 @@ public class DetailActivityFragment extends Fragment {
         disasterDetails.put("SUICIDE", suicideDetails);
         disasterDetails.put("STROKE", strokeDetails);
 
+
         int countryIndex = 1;
         // if US, countryIndex = 1
         // if UK, countryIndex = 3

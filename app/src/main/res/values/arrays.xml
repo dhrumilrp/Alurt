@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_location_options">
+        <item>@string/pref_location_label_USA</item>
+        <item>@string/pref_location_label_UK</item>
+        <item>@string/pref_location_label_CAN</item>
+    </string-array>
+
+    <string-array name="pref_location_values">
+        <item>@string/pref_values_USA</item>
+        <item>@string/pref_values_UK</item>
+        <item>@string/pref_values_CA</item>
+    </string-array>
+
+</resources>

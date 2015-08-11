@@ -15,6 +15,7 @@ import android.widget.TextView;
 public class DetailActivityFragment extends Fragment {
 
     DataStorage data = new DataStorage();
+    SettingsActivity settings = new SettingsActivity();
 
     public DetailActivityFragment() {
     }
@@ -37,7 +38,8 @@ public class DetailActivityFragment extends Fragment {
                     .setText(disasterStr +
                             "\n\n\n" + data.getDisasterData(disasterStr)[0] +
                             "\n\n\n" + data.getDisasterData(disasterStr)[countryIndex] +
-                            "\n\n\n" + data.getDisasterData(disasterStr)[countryIndex+1]);
+                            "\n\n\n" + data.getDisasterData(disasterStr)[countryIndex+1] +
+                            "\n\n\n\n\n\n\n" + settings.getPreferenceString());
         }
         return rootView;
     }

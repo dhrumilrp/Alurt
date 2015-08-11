@@ -4,4 +4,14 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_detail">Information</string>
     <string name="title_activity_settings">Settings</string>
+
+    <string name="pref_location_label">Location</string>
+    <string name="pref_location_label_USA">USA</string>
+    <string name="pref_location_label_UK">UK</string>
+    <string name="pref_location_label_CAN">Canada</string>
+
+    <string name="pref_location_key" translatable="false">location</string>
+    <string name="pref_values_USA" translatable="false">usa</string>
+    <string name="pref_values_UK" translatable="false">uk</string>
+    <string name="pref_values_CA" translatable="false">can</string>
 </resources>

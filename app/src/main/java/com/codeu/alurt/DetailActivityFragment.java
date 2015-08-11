@@ -54,7 +54,7 @@ public class DetailActivityFragment extends Fragment {
                 "canada website"
         };
         final String[] houseDamageDetails = {
-                "Such as floods or other home disasters",
+                "Home disaster, flood, or gas leak",
                 "Call: 1-800-427-2200",
                 "https://www.socalgas.com/safety/emergency.shtml",
                 "Call: UK phone #",
@@ -81,7 +81,7 @@ public class DetailActivityFragment extends Fragment {
                 "http://www.redcross.ca/training-and-certification/first-aid-tips-and-resources-/first-aid-tips/signs---symptoms-of-a-heart-attack"
         };
         final String[] poisonDetails = {
-                "Poison",
+                "Poison inhaled, consumed, or exposed",
                 "Call: (800) 222-1222",
                 "http://www.aapcc.org/",
                 "Call: 111",
@@ -99,7 +99,7 @@ public class DetailActivityFragment extends Fragment {
                 "<Canada website>"
         };
         final String[] suicideDetails = {
-                "Suicide",
+                "Suicide attempt or severe depression",
                 "Call: (800) 273-TALK",
                 "http://www.suicidepreventionlifeline.org/getinvolved/locator",
                 "Call: 08457 90 90 90",

@@ -14,4 +14,8 @@
     <string name="pref_values_USA" translatable="false">usa</string>
     <string name="pref_values_UK" translatable="false">uk</string>
     <string name="pref_values_CA" translatable="false">can</string>
+
+
+    <!-- this string is for the panic button -->
+    <string name="panic_button">PANIC</string>
 </resources>

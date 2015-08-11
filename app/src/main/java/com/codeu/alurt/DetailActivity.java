@@ -5,6 +5,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class DetailActivity extends ActionBarActivity {
@@ -19,6 +21,11 @@ public class DetailActivity extends ActionBarActivity {
                     .add(R.id.container, new DetailActivityFragment())
                     .commit();
         }
+    }
+
+
+    public void panicAlert(View view){
+        startActivity(DetailActivityFragment.createShareAlertIntent());
     }
 
 

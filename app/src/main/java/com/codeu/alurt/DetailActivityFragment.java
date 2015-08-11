@@ -20,6 +20,17 @@ public class DetailActivityFragment extends Fragment {
     }
 
 
+    public static Intent createShareAlertIntent() {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "Hi this is a test");
+
+        //sample phone number for testing purposes
+        shareIntent.putExtra("address", "999-999-9999");
+        return shareIntent;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -137,7 +148,7 @@ public class DetailActivityFragment extends Fragment {
         // if Canada, countryIndex = 5
 
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
-        // The detail Activity called via intent.  Inspect the intent for forecast data.
+
         Intent intent = getActivity().getIntent();
         if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
             String disasterStr = intent.getStringExtra(Intent.EXTRA_TEXT);
@@ -147,6 +158,7 @@ public class DetailActivityFragment extends Fragment {
                             "\n\n\n" + disasterDetails.get(disasterStr)[countryIndex] +
                             "\n\n\n" + disasterDetails.get(disasterStr)[countryIndex+1]);
         }
+
         return rootView;
     }
 }

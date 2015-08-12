@@ -17,7 +17,7 @@ import android.preference.PreferenceManager;
 public class SettingsActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
 
-//    String stringValue;
+    static String stringValue = "usa";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class SettingsActivity extends PreferenceActivity
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object value) {
-        String stringValue = value.toString();
+        stringValue = value.toString();
 
         if (preference instanceof ListPreference) {
             // For list preferences, look up the correct display value in
@@ -62,13 +62,12 @@ public class SettingsActivity extends PreferenceActivity
             // For other preferences, set the summary to the value's simple string representation.
             preference.setSummary(stringValue);
         }
-        System.out.println(stringValue);
         return true;
     }
 
-//    public String getCountry() {
-//        return stringValue;
-//    }
+    public static String getCountry() {
+        return stringValue;
+    }
 
 
 }

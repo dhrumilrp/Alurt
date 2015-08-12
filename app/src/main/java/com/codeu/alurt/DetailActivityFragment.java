@@ -24,20 +24,10 @@ public class DetailActivityFragment extends Fragment {
     public DetailActivityFragment() {
     }
 
-    public static Intent createShareAlertIntent() {
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-        shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, "Hi this is a test");
-
-        //sample phone number for testing purposes
-        shareIntent.putExtra("address", "999-999-9999");
-        return shareIntent;
-    }
 
     public static Intent createShareAlertIntent(Location myLocation) {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        //shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
         shareIntent.setType("text/plain");
 
         String location_url;
@@ -53,7 +43,8 @@ public class DetailActivityFragment extends Fragment {
 
 
         shareIntent.putExtra(Intent.EXTRA_TEXT, active_disaster + " " +
-                location_url);
+                location_url+ " "+
+                "\nSent from my Alurt App");
 
         //sample phone number for testing purposes
         shareIntent.putExtra("address", "999-999-9999;555-555-5555;333-333-3333");

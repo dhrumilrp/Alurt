@@ -41,8 +41,9 @@ public class DetailActivity extends ActionBarActivity implements LocationListene
     public Location getLastKnownLocation(){
         LocationManager mLocationManager = (LocationManager)getApplicationContext().getSystemService(LOCATION_SERVICE);
 
-        gps_enabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-        if(gps_enabled) Toast.makeText(this, "location not null", Toast.LENGTH_SHORT).show();
+        //Test Toast to see if GPS is enabled on device
+        //gps_enabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        //if(gps_enabled) Toast.makeText(this, "location not null", Toast.LENGTH_SHORT).show();
 
         List<String> providers = mLocationManager.getProviders(true);
         Location bestLocation = null;

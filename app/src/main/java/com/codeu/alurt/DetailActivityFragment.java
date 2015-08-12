@@ -15,10 +15,12 @@ import android.widget.TextView;
 public class DetailActivityFragment extends Fragment {
 
     DataStorage data = new DataStorage();
+    String countryName = "usa";
+    String disasterStr;
+    int countryIndex = 1; // default to usa
 
     public DetailActivityFragment() {
     }
-
 
     public static Intent createShareAlertIntent() {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
@@ -36,16 +38,11 @@ public class DetailActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        int countryIndex = 1;
-        // if US, countryIndex = 1
-        // if UK, countryIndex = 3
-        // if Canada, countryIndex = 5
-
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
 
         Intent intent = getActivity().getIntent();
         if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
-            String disasterStr = intent.getStringExtra(Intent.EXTRA_TEXT);
+            disasterStr = intent.getStringExtra(Intent.EXTRA_TEXT);
             ((TextView) rootView.findViewById(R.id.detail_text))
                     .setText(disasterStr +
                             "\n\n\n" + data.getDisasterData(disasterStr)[0] +
@@ -54,6 +51,34 @@ public class DetailActivityFragment extends Fragment {
         }
 
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        countryName = SettingsActivity.getCountry();
+
+        if (countryName.equals("usa")) {
+            countryIndex = 1;
+        }
+        else if (countryName.equals("uk")) {
+            countryIndex = 3;
+        }
+        else if (countryName.equals("can")) {
+            countryIndex = 5;
+        }
+        else {
+            countryIndex = 0; // should never occur
+        }
+
+        View rootView = getView();
+        ((TextView) rootView.findViewById(R.id.detail_text))
+                .setText(disasterStr +
+                        "\n\n\n" + data.getDisasterData(disasterStr)[0] +
+                        "\n\n\n" + data.getDisasterData(disasterStr)[countryIndex] +
+                        "\n\n\n" + data.getDisasterData(disasterStr)[countryIndex + 1]);
     }
 
 }

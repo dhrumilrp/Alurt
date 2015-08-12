@@ -16,7 +16,7 @@ public class DataStorage {
         // details for each view, including description and phone number
         final String[] assaultDetails = {
                 "To make a physical attack or to threaten bodily harm",
-                "Call: (800) 799-SAFE",
+                "Call: (800) 799-7223",
                 "http://www.thehotline.org/",
                 "Call: 0808 2000 247",
                 "http://www.nationaldomesticviolencehelpline.org.uk/",
@@ -25,7 +25,7 @@ public class DataStorage {
         };
         final String[] rapeDetails = {
                 "Forcing sexual relations on another individual without consent",
-                "Call: (800) 656-HOPE",
+                "Call: (800) 656-4673",
                 "https://www.rainn.org/",
                 "Call: UK phone #",
                 "http://rapecrisis.org.uk/",
@@ -34,7 +34,7 @@ public class DataStorage {
         };
         final String[] theftDetails = {
                 "Taking another individual's property without permission",
-                "Call: 330 376-0040",
+                "Call: 330-376-0040",
                 "http://www.crimedoctor.com/home.htm",
                 "Call: UK phone #",
                 "https://www.police.uk/crime-prevention-advice/burglary/",
@@ -52,7 +52,7 @@ public class DataStorage {
         };
         final String[] fireDetails = {
                 "Fire",
-                "Call: 1-800-FIRE-LINE",
+                "Call: 1-800-3473-5463",
                 "http://www.nvfc.org/",
                 "Call: 020 8555 1200",
                 "http://www.london-fire.gov.uk/",
@@ -79,7 +79,7 @@ public class DataStorage {
         };
         final String[] seriousInjuryDetails = {
                 "Strains, sprains, and fractures",
-                "Call: 800.424.2725",
+                "Call: 800-424-2725",
                 "<US website>",
                 "Call: UK phone #",
                 "www.seriousinjuryhelpline.co.uk/",
@@ -88,7 +88,7 @@ public class DataStorage {
         };
         final String[] suicideDetails = {
                 "Suicide attempt or severe depression",
-                "Call: (800) 273-TALK",
+                "Call: (800) 273-8255",
                 "http://www.suicidepreventionlifeline.org/getinvolved/locator",
                 "Call: 08457 90 90 90",
                 "http://www.samaritans.org/",
@@ -97,7 +97,7 @@ public class DataStorage {
         };
         final String[] strokeDetails = {
                 "Face drooping, arm weakness, difficulty speaking",
-                "Call: 1-800-STROKES",
+                "Call: 1-800-787-6537",
                 "http://www.stroke.org/",
                 "UK phone #",
                 "http://www.nhs.uk/conditions/Stroke/Pages/Introduction.aspx",

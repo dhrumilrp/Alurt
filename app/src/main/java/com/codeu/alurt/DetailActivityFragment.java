@@ -1,6 +1,7 @@
 package com.codeu.alurt;
 
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ public class DetailActivityFragment extends Fragment {
     String countryName = "usa";
     String disasterStr;
     int countryIndex = 1; // default to usa
+    static String active_disaster;
 
     public DetailActivityFragment() {
     }
@@ -33,6 +35,31 @@ public class DetailActivityFragment extends Fragment {
         return shareIntent;
     }
 
+    public static Intent createShareAlertIntent(Location myLocation) {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        shareIntent.setType("text/plain");
+
+        String location_url;
+
+        if(myLocation == null){
+            location_url = "Location NOT FOUND";
+        }
+        else{
+            location_url =
+                    "https://www.google.com/maps/@" + myLocation.getLatitude()
+                            + ","  + myLocation.getLongitude();
+        }
+
+
+        shareIntent.putExtra(Intent.EXTRA_TEXT, active_disaster + " " +
+                location_url);
+
+        //sample phone number for testing purposes
+        shareIntent.putExtra("address", "999-999-9999;555-555-5555;333-333-3333");
+        return shareIntent;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,6 +70,7 @@ public class DetailActivityFragment extends Fragment {
         Intent intent = getActivity().getIntent();
         if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
             disasterStr = intent.getStringExtra(Intent.EXTRA_TEXT);
+            active_disaster = disasterStr;
             ((TextView) rootView.findViewById(R.id.detail_text))
                     .setText(disasterStr +
                             "\n\n\n" + data.getDisasterData(disasterStr)[0] +
@@ -68,8 +96,7 @@ public class DetailActivityFragment extends Fragment {
         }
         else if (countryName.equals("can")) {
             countryIndex = 5;
-        }
-        else {
+        } else {
             countryIndex = 0; // should never occur
         }
 

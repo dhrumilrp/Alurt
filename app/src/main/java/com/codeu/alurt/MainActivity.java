@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
             // in two-pane mode.
 
             //Toast.makeText(this, "Screen size changed", Toast.LENGTH_SHORT).show();
-            
+
             mTwoPane = true;
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a

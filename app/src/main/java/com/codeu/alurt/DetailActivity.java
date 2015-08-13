@@ -27,7 +27,7 @@ public class DetailActivity extends ActionBarActivity implements LocationListene
         setContentView(R.layout.activity_detail);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new DetailActivityFragment())
+                    .add(R.id.emergency_detail_container, new DetailActivityFragment())
                     .commit();
         }
 

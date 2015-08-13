@@ -27,8 +27,7 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        // Create some dummy data for the ListView.  Here's a sample weekly forecast
+        
         final String[] data = {
                 "ASSAULT",
                 "RAPE",

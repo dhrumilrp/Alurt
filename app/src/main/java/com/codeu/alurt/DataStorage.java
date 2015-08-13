@@ -20,16 +20,16 @@ public class DataStorage {
                 "http://www.thehotline.org/",
                 "Call: 0808 2000 247",
                 "http://www.nationaldomesticviolencehelpline.org.uk/",
-                "Call: Canada #",
+                "Call: 999",
                 "http://endabuseinlanark.ca/"
         };
         final String[] rapeDetails = {
                 "Forcing sexual relations on another individual without consent",
-                "Call: (800) 656-4673",
+                "Call: 800-656-4673",
                 "https://www.rainn.org/",
                 "Call: UK phone #",
                 "http://rapecrisis.org.uk/",
-                "Call: Canada #",
+                "Call: 999",
                 "http://www.sexassault.ca/"
         };
         final String[] theftDetails = {
@@ -38,16 +38,16 @@ public class DataStorage {
                 "http://www.crimedoctor.com/home.htm",
                 "Call: UK phone #",
                 "https://www.police.uk/crime-prevention-advice/burglary/",
-                "Call: Canada #",
+                "Call: 999",
                 "canada website"
         };
         final String[] houseDamageDetails = {
                 "Home disaster, flood, or gas leak",
                 "Call: 1-800-427-2200",
                 "https://www.socalgas.com/safety/emergency.shtml",
-                "Call: UK phone #",
+                "Call: 020 5433 3234",
                 "UK website",
-                "Call: Canada #",
+                "Call: 999",
                 "canada website"
         };
         final String[] fireDetails = {
@@ -88,7 +88,7 @@ public class DataStorage {
         };
         final String[] suicideDetails = {
                 "Suicide attempt or severe depression",
-                "Call: (800) 273-8255",
+                "Call: 800-273-8255",
                 "http://www.suicidepreventionlifeline.org/getinvolved/locator",
                 "Call: 08457 90 90 90",
                 "http://www.samaritans.org/",

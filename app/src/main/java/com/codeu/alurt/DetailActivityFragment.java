@@ -33,6 +33,8 @@ public class DetailActivityFragment extends Fragment {
         String location_url;
 
         if(myLocation == null){
+            //Only appears on Emulators that are not responsive to GPS
+
             location_url = "Location NOT FOUND";
         }
         else{

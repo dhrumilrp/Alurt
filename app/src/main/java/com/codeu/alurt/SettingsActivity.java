@@ -69,5 +69,4 @@ public class SettingsActivity extends PreferenceActivity
         return stringValue;
     }
 
-
 }

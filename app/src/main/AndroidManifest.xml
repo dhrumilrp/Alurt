@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codeu.alurt" >
 
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="22" />
 
     <!-- Internet Permission -->
     <uses-permission android:name="android.permission.INTERNET" />

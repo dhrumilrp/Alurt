@@ -2,9 +2,6 @@ package com.codeu.alurt;
 
 import java.util.HashMap;
 
-/**
- * Created by vemuri on 8/11/15.
- */
 public class DataStorage {
 
     HashMap<String, String[]> disasterDetails;
